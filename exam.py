@@ -16,13 +16,10 @@ def calculate_shipping_cost(weight, destination):
 
 
 def filter_even_numbers(numbers):
-    """
-    Question 2: Functions & Basic Loops
-    Accept a list of integers and return a new list containing only the even numbers.
-    - If the list is empty, return an empty list.
-    """
-    # TODO: Use a loop to filter the list
-    pass
+    
+    even_nums = [num for num in numbers if num % 2 == 0]
+
+    return even_nums
 
 def generate_multiplication_table(n, limit):
     """
@@ -31,8 +28,11 @@ def generate_multiplication_table(n, limit):
     up to the 'limit'. 
     Example: n=2, limit=3 -> ["2 * 1 = 2", "2 * 2 = 4", "2 * 3 = 6"]
     """
-    # TODO: Implement loop-based string formatting
-    pass
+    multiplication_table = []
+    for i in range(1, limit + 1):
+        multiplication_table.append(f"{n} * {i} = {n * i}")
+
+    return multiplication_table
 
 def find_longest_word(sentence):
     """
