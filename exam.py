@@ -11,8 +11,16 @@ def calculate_shipping_cost(weight, destination):
     - 'international': $15.00 flat rate + $5.00 per lb.
     - If weight <= 0, return 0.0.
     """
-    # TODO: Implement the conditional logic to return the total cost
-    pass
+
+    if weight <= 0:
+        return 0.0
+    
+    if destination == 'domestic':
+        shipping = (weight * 1.50) + 5.00
+        return shipping
+    elif destination == 'international':
+        shipping = (weight * 5.00) + 15.00
+        return shipping
 
 
 def filter_even_numbers(numbers):
