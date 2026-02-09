@@ -41,8 +41,21 @@ def find_longest_word(sentence):
     - If there is a tie, return the first one found.
     - If the string is empty, return an empty string.
     """
-    # TODO: Split the string and track the maximum length word
-    pass
+    if sentence == "":
+        return ""
+    
+    words = sentence.split()
+    longest_word_length = len(words[0])
+    longest_word = words[0]
+
+    for word in words:
+        if len(word) == longest_word_length:
+            continue
+        if len(word) > longest_word_length:
+            longest_word_length = len(word)
+            longest_word = word
+    return longest_word
+
 
 def fizz_buzz_custom(start, end, fizz_val, buzz_val):
     """
