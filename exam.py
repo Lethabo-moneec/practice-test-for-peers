@@ -14,6 +14,7 @@ def calculate_shipping_cost(weight, destination):
     # TODO: Implement the conditional logic to return the total cost
     pass
 
+
 def filter_even_numbers(numbers):
     """
     Question 2: Functions & Basic Loops

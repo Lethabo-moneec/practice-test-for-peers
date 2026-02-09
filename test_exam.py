@@ -44,6 +44,7 @@ class TestSectionA:
         result_both = fizz_buzz_custom(6, 6, 2, 3)
         assert result_both == ["FizzBuzz"]
 
+
 @pytest.fixture(scope="session", autouse=True)
 def summary_score(request):
     """
